@@ -18,11 +18,20 @@ else:
             print("\nSomente numeros inteiros e sem vírgula devem ser digitados")
         else:
             if n1 < n2 and n1 < n3:
-                print(f"{n1}, {n2}, {n3}")
+                if n2 < n3:
+                    print(f"{n1}, {n2}, {n3}")
+                else:
+                    print(f"{n1}, {n3}, {n2}")
             elif n2 < n1 and n2 < n3:
-                print(f"{n2}, {n1}, {n3}")
+                if n1 < n3:
+                    print(f"{n2}, {n1}, {n3}")
+                else:
+                    print(f"{n2}, {n3}, {n1}")
             else:
-                print(f"{n3}, {n2}, {n1}")
+                if n1 < n2:
+                    print(f"{n3}, {n1}, {n2}")
+                else:
+                    print(f"{n3}, {n2}, {n1}")
 
 
 print("\nPrograma finalizado")

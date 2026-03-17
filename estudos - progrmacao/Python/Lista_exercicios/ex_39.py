@@ -1,3 +1,8 @@
+""" Faça um programa em python que solicite a digitação dos coeficientes a, b e c de uma equação de segundo grau, informando se a equação não possui raízes,
+a única raiz da equação, quando esse for o caso, as duas raízes da equação
+"""
+
+
 print("\t\tprograma para solucionar equações de segundo grau")
 try:
    A = float(input("\nDigite o valor de A: "))

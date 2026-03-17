@@ -15,3 +15,5 @@ else:
     else:
         celsius =  5/9  * (fah - 32)
         print(f"A temperatura {fah} fahrenheit é igual a {celsius:.2f} graus Celsius!.")
+
+print("\nFim do programa")

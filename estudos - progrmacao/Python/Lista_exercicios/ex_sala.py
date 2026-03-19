@@ -1,19 +1,44 @@
-"""Faça um programa em pyrhon que solicite a digitação de três valores representado,
-respectivamente, as horas, os minutos e os segundos de um horário, verificando, a seguir se
-os mesmos representam ou não um horárioa válido"""
-
 print("Programa para valider se horas são válidas")
 
-try:
-    horas = int(input("\nDigite as horas: "))
-    minutos = int(input("\nDigite os minutos: "))
-    segundos = int(input("\nDigite os segundos: "))
-except ValueError:
-    print("\nSomente numeros sem vírgula devem ser digitados!")
-else:
-    if 0 <= horas <= 23 and 0 <= minutos <= 59 and 0 <= segundos <= 59:
-        print("\nHorario valido!")
-        print(f"\nSão {horas} horas, {minutos} minutos e {segundos} segundos!")
 
+try:
+    hora = int(input("Digite hora: "))
+except ValueError:
+    print("\nHora deve ser numerica!")
+else:
+    if hora < 0 or hora > 23:
+        print("\nHorario invalido")
     else:
-        print("\nHorario inválido!!")
+        try:
+            minutos = int(input("\nDigite os minutos: "))
+        except ValueError:
+            print("\nMinuto deve ser numerico!")
+        else:
+            if minutos < 0 or minutos > 59:
+                print("\nMinuto invalido!")
+            else:
+                try:
+                    segundos = int(input("\nDigite segundos: "))
+                except ValueError:
+                    print("\nSegundos deve ser numerico!")
+                else:
+                    if segundos < 0 or segundos > 60:
+                        print("\nSegundos invalidos!")
+                    else:
+                        try:
+                            qtdSegundos = int(input("\nAgora digite quantos segundo você quer adiantar: "))
+                        except ValueError:
+                            print("\nSegundos deve ser numerico")
+                        else:
+                            if qtdSegundos <= 0:
+                                print("quantidade deve ser positivo!")
+                            else:
+                                segundos = segundos + qtdSegundos
+                                if segundos > 60:
+                                    qtdSegundos = qtdSegundos - segundos
+                                    segundos = 0
+                                else:
+                                    minutos = minutos = qtdSegundos
+
+                                    
+                                

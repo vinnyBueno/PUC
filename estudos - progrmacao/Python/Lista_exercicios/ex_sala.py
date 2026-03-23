@@ -25,20 +25,22 @@ else:
                     if segundos < 0 or segundos > 60:
                         print("\nSegundos invalidos!")
                     else:
+                        print(f"\n{hora}:{minutos}:{segundos}")
                         try:
                             qtdSegundos = int(input("\nAgora digite quantos segundo você quer adiantar: "))
                         except ValueError:
                             print("\nSegundos deve ser numerico")
                         else:
-                            if qtdSegundos <= 0:
-                                print("quantidade deve ser positivo!")
-                            else:
-                                segundos = segundos + qtdSegundos
-                                if segundos > 60:
-                                    qtdSegundos = qtdSegundos - segundos
-                                    segundos = 0
-                                else:
-                                    minutos = minutos = qtdSegundos
 
-                                    
-                                
+                            total = hora * 3600 + minutos * 60 + segundos + qtdSegundos
+
+
+                            total = total % 86400
+
+                            hora = total // 3600
+                            total = total % 3600
+
+                            minutos = total // 60
+                            segundos = total % 60
+
+                            print(f"\nNovo horario: {hora:02d}:{minutos:02d}:{segundos:02d}")

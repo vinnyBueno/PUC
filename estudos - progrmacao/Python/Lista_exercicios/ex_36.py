@@ -1,4 +1,8 @@
-print("Programa para valider se horas são válidas")
+"""Faça um programa em python que solicite a digitação de três valores representando, respectivamente, as horas, os minutos e os segundos de um horário, verificando,
+a seguir se os mesmos representam ou não um horário válido. Sendo válido o programa deverá solicitar a digitação de uma quantidade de segundos, calcular e monstrar na tela
+ o horários que se obtem ao adiantar o horário digitado a quantidade de segundo também digitada"""
+
+print("Programa para atrasar em segundos as horas")
 
 
 try:

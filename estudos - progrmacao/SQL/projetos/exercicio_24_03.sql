@@ -43,3 +43,15 @@ SELECT cod, nome from funcionario where salario > 1000.00;
 
 #5 Selecione os códigos, nomes e salários dos funcionários que possuem salário entre $1000,00 e $2000,00 (inclusive).
 SELECT cod, nome, salario from funcionario where salario >= 1000.00 and salario <= 2000.00;
+
+SELECT *  from FUNCIONARIO where NOME LIKE "*na" or "*na*" or "na*";
+
+SELECT * from FUNCIONARIO where COD LIKE "1*" order by COD, NOME;
+
+SELECT * from FUNCIONARIO where SALARIO > 1000 order by COD;
+
+SELECT * from FUNCIONARIO where SALARIO > 1000 order by COD desc;
+
+SELECT * from FUNCIONARIO order by CODDEPTO, SALARIO desc;
+
+SELECT count(*) from FUNCIONARIO;

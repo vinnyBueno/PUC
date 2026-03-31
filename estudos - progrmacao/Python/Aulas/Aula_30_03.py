@@ -43,7 +43,7 @@ PROGRAMA TERMINADO COM SUCESSO!
 -----------------------------------------------------------------------------
 '''
 roda_programa = True
-while roda_programa == True:
+while roda_programa:
     
     
     print("PROGRAMA PARA CONVERTER TEMPERATURAS")

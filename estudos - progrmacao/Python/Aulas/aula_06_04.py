@@ -56,6 +56,21 @@ def resposta_s_ou_n_para_uma_pergunta (pergunta):
             
     return resposta
 
+def pegue_numero():
+        digitou_corretamente=False
+        while not digitou_corretamente:
+            try:
+                numero=int(input("Digite um número natural: "))
+            except ValueError:
+                print("Deve-se digitar um número natural; tente novamente!")
+            else:
+                if numero<0:
+                    print("Negativos não são números naturais; tente novamente!")
+                else:
+                    digitou_corretamente=True
+        
+        return numero
+
 # daqui para cima definimos subprogramas
 # daqui para baixo chamamos o que definimos para formar o programa
     
@@ -64,33 +79,10 @@ print('PROGRAMA PARA VERIFICAR SE DOIS NÚMERO NATURAIS SÃO AMIGOS')
 terminou_de_testar_amigos=False
 while not terminou_de_testar_amigos:
     # obtendo o primeiro_numero
-    digitou_corretamente=False
-    while not digitou_corretamente:
-        try:
-            primeiro_numero=int(input("Digite um número natural: "))
-        except ValueError:
-            print("Deve-se digitar um número natural; tente novamente!")
-        else:
-            if primeiro_numero<0:
-                print("Negativos não são números naturais; tente novamente!")
-            else:
-                digitou_corretamente=True
-    
+    primeiro_numero = pegue_numero()
+        
     # obtendo o segundo_numero
-    digitou_corretamente=False
-    while not digitou_corretamente:
-        try:
-            segundo_numero=int(input("Digite OUTRO número natural: "))
-        except ValueError:
-            print("Deve-se digitar um número natural; tente novamente!")
-        else:
-            if segundo_numero<0:
-                print("Negativos não são números naturais; tente novamente!")
-            else:
-                if segundo_numero==primeiro_numero:
-                    print("Foi pedido OUTRO número natural, não o mesmo; tente novamente!")
-                else:
-                    digitou_corretamente=True
+    segundo_numero = pegue_numero()
     
     # se a soma dos divisores de um deu igual ao outro e vice-versa diga que são amigos
     # senão, diga que não são amigos

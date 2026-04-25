@@ -17,7 +17,7 @@ def opcao_escolhida ():
     chave_para_escolher_opcao_ate_acertar_ligada=True
     while chave_para_escolher_opcao_ate_acertar_ligada:
         try:
-            opcao=int(input("Opcao? "))
+            opcao =int(input("escolha a opcao: "))
         except ValueError:
             print("Opção inválida; tente novamente!")
         else:
@@ -36,7 +36,7 @@ def numero_digitado(proposito, aceitavel=None):
     chave_para_digitar_um_numero_ate_acertar_ligada=True
     while chave_para_digitar_um_numero_ate_acertar_ligada:
         try:
-            numero=float(input("Qual número deseja "+proposito+"? ", sep=""))
+            numero=float(input("Qual número deseja "+proposito+" ? "))
         except ValueError:
             print("Foi pedido um número para ",proposito,"; tente novamente!", sep="")
         else:
@@ -59,7 +59,7 @@ def excluir_numero_dado_o_numero(lista):
     else:
         print("O numero não existe na lista!")
 
-def excluir_numero_dada_a_posição(lista):
+def excluir_numero_dada_a_posicao(lista):
     chave_para_digitar_um_numero_ate_acertar_ligada=True
     while chave_para_digitar_um_numero_ate_acertar_ligada:
         try:
@@ -101,10 +101,15 @@ def o_maior (lista):
     posicao=1
     while posicao<len(lista):
         if lista[posicao]>maior:
-            maiorr=lista[posicao]
+            maior=lista[posicao]
         posicao+=1
     return maior
 
+def mostra_o_maior (lista):
+    print("O maior valor",o_maior(lista))
+
+def mostra_o_menor (lista):
+    print("O menor valor",o_menor(lista))
 
 
 
@@ -120,15 +125,15 @@ def executar_opcoes (lista):
         elif opcao==3:
             excluir_numero_dado_o_numero(lista)
         elif opcao==4:
-            mostrar_soma (lista)
+            excluir_numero_dada_a_posicao(lista)
         elif opcao==5:
-            o_menor (lista)
+            print(lista)
         elif opcao==6:
-            o_maior (lista)
+            mostrar_soma(lista)
         elif opcao==7:
-            ...
+            mostra_o_menor(lista)
         elif opcao==8:
-            ...
+            mostra_o_maior(lista)
         else: # só sobrou a opcao ser 9
             chave_para_realizar_operacoes_ate_cansar_ligada=False
 

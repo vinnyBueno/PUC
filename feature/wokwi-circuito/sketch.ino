@@ -1,5 +1,5 @@
 void setup() {
-  // put your setup code here, to run once:
+  
   Serial.begin(115200);
   if(!Serial) Serial.println("serial is not ok");
   pinMode(3, OUTPUT);
@@ -8,7 +8,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  
   digitalWrite(3, HIGH);
   Serial.println("green is on");
   delay(2000);

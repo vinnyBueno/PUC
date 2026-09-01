@@ -20,3 +20,13 @@ SELECT P.NOME, T.DESCRICAO
 FROM PROFESSORES P
 INNER JOIN TITULOS T ON T.CODIGO = P.TITULACAO_MAXIMA
 ORDER BY P.NOME ASC
+
+-- problema:
+-- exibir uma tabela resultante a partir de uma 
+-- consulta SQL, que mostre quantidade de professores
+-- por titulação. Exemplo:
+-- Dica (usar função de agregação)
+-- Graduação - 1
+-- Mestrado - 10
+-- Doutorado - 11
+-- pos-doutorado - 20
